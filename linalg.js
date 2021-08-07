@@ -198,8 +198,6 @@ class Linalg {
 
         if (!(a instanceof Matrix)) throw "O parametro a deve ser um objeto do tipo Matrix"
 
-        //Meu metodo gauss jordan
-
 
         for (var j = 1; j <= a.cols - 1; j++) {
 
@@ -262,53 +260,13 @@ class Linalg {
             }
         }
 
-        //Fim
-
-         //BRUNO - Metodo feito em sala
-
-       /* for (var j = 1; j <= a.cols - 1; j++) {
-  
-              //Colocar o maior elemento da coluna como pivo
-  
-              var max = a.get(j,j);
-              var index = j
-  
-              for (var i = j +1; i <= a.rows; i++) {
-  
-                  if (a.get(i, j) != 0 && a.get(i, j) > max) {
-  
-                      max = a.get(i, j)
-                      index = i
-                  }
-       
-              }
-                 if(index!=j){
-  
-                  this.change_two_lines(a, j, index)
-
-                 }
         
-  
-              //Zerar elementos do pivo na coluna j
-  
-              for (var i = j + 1; i <=  a.rows; i++) {
-  
-                if(a.get(i,j) !=0){
-           
-                      this.mulLineByConstantAddByOtherLine(a, j, (a.get(i, j) * -1) / a.get(j, j), i)
-                }
-
-              }
-         
-  
-          }*/
 
         return a
 
     
     }
 
-     //FUNÇÕES DO BRUNO
 
      change_two_lines(m, l1, l2) {
 
